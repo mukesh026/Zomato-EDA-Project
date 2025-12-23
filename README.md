@@ -75,10 +75,36 @@ Restaurants offering online ordering have **statistically significantly higher r
 ---
 
 ## 📊 Visualizations
-- Count plots for restaurant types and order modes  
-- Boxplots for rating comparison  
-- Histograms for rating distribution  
-- Heatmaps showing order preference by restaurant type  
+
+### 1. Rating vs Price Category
+This boxplot shows the relationship between restaurant pricing and ratings. Interestingly, expensive restaurants (>₹500 for two) tend to have slightly higher median ratings.
+
+![Rating vs Price Category](rating_vs_price.png)
+
+### 2. High vs Low Rated Restaurants
+Distribution of restaurants based on rating threshold (≥4.0). The majority of restaurants in the dataset have ratings above 4.0, indicating overall good quality.
+
+![High vs Low Rated Restaurants](high_vs_low_rating.png)
+
+### 3. Restaurant Types Distribution
+Count of different restaurant types in the dataset. **Dining** restaurants dominate the dataset, followed by **Cafes** and **Buffet** establishments.
+
+![Restaurant Types](restaurant_types.png)
+
+### 4. Votes by Restaurant Type
+This line graph shows the total votes received by each restaurant type. **Dining** restaurants receive significantly more votes, indicating higher customer engagement.
+
+![Votes by Restaurant Type](votes_by_type.png)
+
+### 5. Online vs Offline Order Availability
+Pie chart showing the distribution of restaurants offering online ordering versus those that don't.
+
+![Online vs Offline Orders](online_vs_offline.png)
+
+### 6. Rating Distribution
+Histogram showing the distribution of ratings across all restaurants. Most ratings cluster around 3.5-4.0 range.
+
+![Rating Distribution](rating_distribution.png)
 
 ---
 

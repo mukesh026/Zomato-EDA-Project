@@ -16,15 +16,16 @@ This project performs **Exploratory Data Analysis (EDA)** on a Zomato restaurant
 ---
 
 ## 🗂️ Dataset
-- Source: Zomato restaurant dataset  
-- Size: ~150 restaurant records  
+- Source: Zomato restaurant dataset (`Zomato-data-.csv`)
+- Size: 148 restaurant records  
 - Key Features:
-  - `name`
-  - `rate`
-  - `votes`
-  - `online_order`
-  - `listed_in(type)`
-  - `approx_cost(for two people)`
+  - `name` - Restaurant name
+  - `online_order` - Whether online ordering is available (Yes/No)
+  - `book_table` - Whether table booking is available (Yes/No)
+  - `rate` - Restaurant rating (cleaned from format like "4.1/5")
+  - `votes` - Number of customer votes
+  - `approx_cost(for two people)` - Approximate cost for two people
+  - `listed_in(type)` - Restaurant type (Buffet, Cafes, Delivery, Dining)
 
 ---
 
@@ -39,10 +40,11 @@ This project performs **Exploratory Data Analysis (EDA)** on a Zomato restaurant
 ## 🔍 Key Analysis Steps
 
 ### 1️⃣ Data Cleaning & Preprocessing
-- Handled inconsistent rating formats (`NEW`, `-`, `3.8/5`)
-- Converted ratings into numerical values
-- Checked and treated missing values
-- Processed categorical variables for analysis
+- Replaced unwanted values (`NEW`, `-`) with NaN in the `rate` column
+- Extracted numeric ratings from format "X.X/5" to float values
+- Filled missing ratings with the median rating
+- Verified data completeness (no null values after cleaning)
+- All 148 records have complete data across 7 columns
 
 ---
 
@@ -55,9 +57,9 @@ This project performs **Exploratory Data Analysis (EDA)** on a Zomato restaurant
 ---
 
 ### 3️⃣ Feature Engineering
-- Created cost-based and rating-based features
-- Categorized restaurants by expense level
-- Identified high-rated vs low-rated restaurants
+- Created `is_expensive` feature: Boolean flag for restaurants costing > ₹500 for two
+- Created `high_rating` feature: Boolean flag for restaurants with rating ≥ 4.0
+- These features enable categorical analysis of pricing and quality segments
 
 ---
 
@@ -76,44 +78,35 @@ Restaurants offering online ordering have **statistically significantly higher r
 
 ## 📊 Visualizations
 
-### 1. Rating vs Price Category
-This boxplot shows the relationship between restaurant pricing and ratings. Interestingly, expensive restaurants (>₹500 for two) tend to have slightly higher median ratings.
+### 1. Rating vs Price Category (Boxplot)
+Compares ratings between expensive (>₹500) and affordable (≤₹500) restaurants. Shows the distribution of ratings for each price category.
 
-![Rating vs Price Category](rating_vs_price.png)
+**Key Insight:** Helps identify if higher prices correlate with better ratings.
 
-### 2. High vs Low Rated Restaurants
-Distribution of restaurants based on rating threshold (≥4.0). The majority of restaurants in the dataset have ratings above 4.0, indicating overall good quality.
+### 2. High vs Low Rated Restaurants (Count Plot)
+Distribution of restaurants based on rating threshold (≥4.0 vs <4.0). 
 
-![High vs Low Rated Restaurants](high_vs_low_rating.png)
+**Key Insight:** The majority of restaurants have ratings ≥ 4.0, indicating overall good quality in the dataset.
 
-### 3. Restaurant Types Distribution
-Count of different restaurant types in the dataset. **Dining** restaurants dominate the dataset, followed by **Cafes** and **Buffet** establishments.
+### 3. Types of Restaurants (Count Plot)
+Count of different restaurant types in the dataset (Buffet, Cafes, Delivery, Dining).
 
-![Restaurant Types](restaurant_types.png)
+**Key Insight:** Shows which restaurant types are most common in the dataset.
 
-### 4. Votes by Restaurant Type
-This line graph shows the total votes received by each restaurant type. **Dining** restaurants receive significantly more votes, indicating higher customer engagement.
+### 4. Votes by Restaurant Type (Line Graph)
+Total votes received by each restaurant type, showing customer engagement levels.
 
-![Votes by Restaurant Type](votes_by_type.png)
-
-### 5. Online vs Offline Order Availability
-Pie chart showing the distribution of restaurants offering online ordering versus those that don't.
-
-![Online vs Offline Orders](online_vs_offline.png)
-
-### 6. Rating Distribution
-Histogram showing the distribution of ratings across all restaurants. Most ratings cluster around 3.5-4.0 range.
-
-![Rating Distribution](rating_distribution.png)
+**Key Insight:** Identifies which restaurant types receive the most customer interaction and reviews.
 
 ---
 
 ## 📈 Key Insights
-- Online-order restaurants receive significantly higher ratings  
-- Dining restaurants are preferred for offline visits  
-- Cafes show higher online-order adoption  
-- Most couples prefer restaurants priced around ₹300–₹400  
-- Higher votes generally correlate with better ratings  
+- **Online ordering impact:** Restaurants with online ordering have significantly higher ratings (p < 0.001)
+- **Statistical significance:** T-statistic of 6.11 with p-value of 8.39 × 10⁻⁹ confirms the difference
+- **Most popular restaurant:** Empire Restaurant received the highest votes (4,884)
+- **Rating distribution:** Majority of restaurants have ratings ≥ 4.0
+- **Restaurant types:** Dataset includes Buffet, Cafes, Delivery, and Dining establishments
+- **Price categories:** Restaurants are categorized as expensive (>₹500) or affordable (≤₹500)  
 
 ---
 

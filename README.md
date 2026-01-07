@@ -83,20 +83,28 @@ Compares ratings between expensive (>₹500) and affordable (≤₹500) restaura
 
 **Key Insight:** Helps identify if higher prices correlate with better ratings.
 
+![Rating vs Price Category Boxplot](Images/1.png)
+
 ### 2. High vs Low Rated Restaurants (Count Plot)
 Distribution of restaurants based on rating threshold (≥4.0 vs <4.0). 
 
 **Key Insight:** The majority of restaurants have ratings ≥ 4.0, indicating overall good quality in the dataset.
+
+![High vs Low Rated Restaurants Count Plot](Images/2.png)
 
 ### 3. Types of Restaurants (Count Plot)
 Count of different restaurant types in the dataset (Buffet, Cafes, Delivery, Dining).
 
 **Key Insight:** Shows which restaurant types are most common in the dataset.
 
+![Types of Restaurants Count Plot](Images/4.png)
+
 ### 4. Votes by Restaurant Type (Line Graph)
 Total votes received by each restaurant type, showing customer engagement levels.
 
 **Key Insight:** Identifies which restaurant types receive the most customer interaction and reviews.
+
+![Votes by Restaurant Type Line Graph](Images/5.png)
 
 ---
 

@@ -106,6 +106,48 @@ Total votes received by each restaurant type, showing customer engagement levels
 
 ![Votes by Restaurant Type Line Graph](Images/5.png)
 
+### 5. Restaurant with Maximum Votes
+Identifies the restaurant with the highest customer engagement by analyzing vote counts.
+
+**Key Insight:** Shows which restaurant has the most customer reviews and engagement, indicating popularity and customer satisfaction.
+
+![Restaurant with Maximum Votes](Images/6.png)
+
+### 6. Online vs Offline Orders Distribution
+Count plot showing the distribution of restaurants offering online ordering versus offline-only service.
+
+**Key Insight:** Reveals the adoption rate of online ordering across restaurants in the dataset.
+
+![Online vs Offline Orders](Images/7.png)
+
+### 7. Ratings Distribution
+Histogram displaying the distribution of restaurant ratings across 5 bins.
+
+**Key Insight:** Shows the overall quality distribution and rating patterns, helping identify the most common rating ranges.
+
+![Ratings Distribution](Images/8.png)
+
+### 8. Approximate Cost for Two People
+Distribution of pricing across restaurants, showing the variety of cost ranges available.
+
+**Key Insight:** Helps understand pricing strategies and affordability segments in the restaurant market.
+
+![Cost Distribution](Images/9.png)
+
+### 9. Ratings: Online vs Offline Orders (Boxplot)
+Comparative boxplot analysis of rating distributions between restaurants offering online orders and those that don't.
+
+**Key Insight:** Provides visual confirmation of the statistical test, clearly showing that online-order restaurants have higher median ratings.
+
+![Ratings by Order Type](Images/10.png)
+
+### 10. Online Order Preference by Restaurant Type (Heatmap)
+Heatmap visualization showing the relationship between restaurant types and online ordering availability.
+
+**Key Insight:** Identifies which restaurant types (Buffet, Cafes, Delivery, Dining) are more likely to offer online ordering services.
+
+![Online Order Heatmap](Images/11.png)
+
 ---
 
 ## 📈 Key Insights
